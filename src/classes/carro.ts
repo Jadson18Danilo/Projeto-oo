@@ -1,4 +1,4 @@
-//export class Carro {
+export class Carro {
     // definir atributos
     /*modelo: string; 
     fabricante: string;
@@ -7,7 +7,7 @@
     preco: number;*/
 
     // definir metodo construtor
-    /*constructor(private _modelo: string,
+    constructor(private _modelo: string,
         private _fabricante: string,
         private _ano: number,
         private _cor: string,
@@ -68,52 +68,4 @@
         this._preco = preco
     }
 
-}*/
-
-
-/*Crie uma classe conta com os seguintes atributos:
-- numero
-- titular
-- saldo
-* só quem manipula o saldo é um deposito, saque ou transferência
-* adicione todas as funcionalidades que acharem necessário*/
-export class deposito {
-    constructor(private _numero: number,
-    private _titular: string,
-    private _saldo: number){
-        this.titular = _titular
-    }
-
-    // metodo get
-    public get numero(): number{
-        return this._numero
-    }
-
-    public get titular(): string {
-        return this._titular.toUpperCase()
-    }
-
-    public get saldo(): number {
-        return this._saldo
-    }
-
-    // metodo set
-
-    public set numero(numero: number){
-        if(numero <= 0){
-            throw new Error('inválido')
-        }
-        this._numero = numero
-    }
-
-    public set titular(titular: string){
-        this._titular = titular.trim().toLowerCase()
-    }
-    
-    public set saldo(saldo: number){
-        if(saldo <= 0){
-            throw new Error('Preço inválido')
-        }
-        this._saldo = saldo
-    }
 }
